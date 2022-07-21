@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xl-3 col-sm-6 mb-4 text-center" *ngFor="let user of userData">
+        <a href="#" class="d-block rounded shadow-sm border text-decoration-none p-4">
+            <!-- <img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"> -->
+            <i class="fas fa-user-circle text-primary opacity-75 fa-5x mb-3"></i>
+            <h5 class="text-dark fs-6 mb-0">{{ user.name }}</h5>
+            <span class="small text-muted">{{ user.email }}</span>
+            <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item">
+                    <button class="btn btn-outline-primary btn-sm btn-floating font-small rounded-circle" type="button">
+                        <i class="fas fa-phone-alt"></i>
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button class="btn btn-outline-primary btn-sm btn-floating font-small rounded-circle" type="button">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </li>
+            </ul>
+        </a>
+    </div>
+</div>
