@@ -1,9 +1,15 @@
-<div class="row">
+<div class="row" *ngIf="!isLoader">
     <div class="col-md-6 col-12 mb-3" *ngFor="let album of albumData">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-capitalize fw-normal fs-6 mb-0">{{ album.title }}</h5>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="isLoader">
+    <div class="col-12">
+        <app-loader></app-loader>
     </div>
 </div>

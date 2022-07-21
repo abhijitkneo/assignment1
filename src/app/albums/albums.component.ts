@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AlbumsComponent implements OnInit {
     private URL = "https://jsonplaceholder.typicode.com/albums"
     albumData: any;
+    isLoader: boolean = true;
 
     constructor(private http: HttpClient) { }
 
@@ -17,6 +18,7 @@ export class AlbumsComponent implements OnInit {
             res => {
                 console.log(res);
                 this.albumData = res
+                this.isLoader = false;
             }
         )
     }

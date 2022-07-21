@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
     private URL = "https://jsonplaceholder.typicode.com/users";
     userData: any;
+    isLoader: boolean = true;
 
     constructor(private http:HttpClient) { }
 
@@ -17,6 +18,7 @@ export class UsersComponent implements OnInit {
             res => {
                 console.log(res);
                 this.userData = res;
+                this.isLoader = false;
             }
         )
     }

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="!isLoader">
     <div class="col-xl-3 col-sm-6 mb-4 text-center" *ngFor="let user of userData">
         <a href="#" class="d-block rounded shadow-sm border text-decoration-none p-4">
             <!-- <img src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"> -->
@@ -18,5 +18,11 @@
                 </li>
             </ul>
         </a>
+    </div>
+</div>
+
+<div class="row" *ngIf="isLoader">
+    <div class="col-12">
+        <app-loader></app-loader>
     </div>
 </div>

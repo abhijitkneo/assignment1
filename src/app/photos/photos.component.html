@@ -1,4 +1,4 @@
-<div class="row photo-container">
+<div class="row photo-container" *ngIf="!isLoader">
     <div class="col-md-2 col-6 mb-3" *ngFor="let photo of photoData">
         <div class="card">
             <img class="card-img-top" src="{{ photo.thumbnailUrl}}" alt="Card image cap">
@@ -6,5 +6,10 @@
                 <p class="card-text small">{{ photo.title }}</p>
             </div>
         </div>
+    </div>
+</div>
+<div class="row" *ngIf="isLoader">
+    <div class="col-12">
+        <app-loader></app-loader>
     </div>
 </div>

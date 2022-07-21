@@ -12,6 +12,7 @@ import { TodosComponent } from './todos/todos.component';
 import { UsersComponent } from './users/users.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HeaderComponent } from './header/header.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderComponent } from './header/header.component';
     TodosComponent,
     UsersComponent,
     NotfoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

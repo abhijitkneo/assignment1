@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TodosComponent implements OnInit {
     private URL = "https://jsonplaceholder.typicode.com/todos";
     todoData: any;
+    isLoader: boolean = true;
 
     constructor(private http:HttpClient) { }
 
@@ -17,6 +18,7 @@ export class TodosComponent implements OnInit {
             res=> {
                 console.log(res);
                 this.todoData = res;
+                this.isLoader = false;
             }
         )
     }
